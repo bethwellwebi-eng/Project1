@@ -1,0 +1,40 @@
+CHAPTER SIX: FILE SHARING AND NETWORK SERVICES
+
+Install samba
+# sudo dnf install samba samba-common samba-client -y
+
+Start and enable samba services
+# sudo systemctl start smb 
+# sudo systemctl enable smb 
+
+Check status
+# systemctl status smb
+# systemctl status nmb
+
+Create a shared folder
+# sudo mkdir -p /srv/shared
+# sudo chmod -R 777 /srv/shared
+
+Create a samba user
+# sudo smbpasswd -a webi
+# sudo smbpasswd -e webi
+
+Configure samba
+# sudo nano /etc/samba/smb.conf
+
+(Ctrl O-> ENTER-> Ctrl X)-> To save and exit
+
+Test samba config
+# Testparm
+
+Restart samba
+# sudo systemctl restart smb nmb
+
+Allow samba through firewall
+# sudo firewall-cmd --add-service=samba --permanent
+# sudo firewall-cmd –reload
+
+Find fedora IP
+# ip a
+# check status
+# systemctl status smb

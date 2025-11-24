@@ -1,0 +1,27 @@
+CHAPTER FIVE: NETWORK CONFIGURATION AND SERVICES
+
+a. DYNAMIC HOST CONFIGURATION PROTOCOL(DHCP)
+Installation
+# sudo dnf install dhcp-server -y
+# sudo nano /etc/dhcp/dhcpd.conf
+
+# sudo systemctl enable dhcpd
+# sudo systemctl status dhcpd-> Run this command to see if the DHCP service is running
+- If it is running "Active: active (running)" should appear. 
+
+b. DOMAIN NAME SYSTEM
+Installation
+# sudo dnf install bind bind-utils -y
+
+Zone Configuration
+zone "Webi.com" IN { 
+      type master; 
+      file "Webi.com"; 
+      allow-update {none; };
+};
+
+Start service
+# sudo systemctl enable-> now named
+
+Check if it is active
+# sudo 	systemctl enable–> now named

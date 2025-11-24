@@ -1,0 +1,17 @@
+CHAPTER SEVEN: WEB SERVER ADMINISTRATION
+APACHE HTTP SERVER
+Install
+# sudo dnf install httpd -y
+# sudo systemctl start httpd
+# sudo systemctl enable httpd
+# systemctl status httpd
+
+- Open Fedora browser, # Test 10.0.2.15 for me this is my server ip
+
+SSL/HTTPS
+# sudo dnf install mod_ssl -y
+# sudo openssl req -newkey rsa:2048 -nodes -keyout /etc/pki/tls/private/server.key -x509 -days 365 -out/etc/pki/tls/certs/server.crt
+
+Enable SSL
+# sudo systemctl restart httpd
+# sudo nano /etc/httpd/conf.d/ssl.conf

@@ -1,0 +1,8 @@
+CHAPER NINE: NETWORK MONITORING AND TROUBLESHOOTING
+
+System Monitoring
+# sudo dnf install netdata -y
+# sudo systemctl enable --now netdata
+
+Allow firewall
+# sudo firewall-cmd --add-port=19999/tcp --permanent
