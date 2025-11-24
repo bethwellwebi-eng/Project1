@@ -1,4 +1,4 @@
-FEDORA SERVER VERSION 42
+NETWORKS ADMINISTRATION
 
 CHAPTER FIVE: NETWORK CONFIGURATION AND SERVICES
 
@@ -127,4 +127,5 @@ System Monitoring
 
 Allow firewall
 # sudo firewall-cmd --add-port=19999/tcp --permanent
+
 # sudo firewall-cmd –reload
